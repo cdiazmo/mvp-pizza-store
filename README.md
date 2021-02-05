@@ -4,8 +4,9 @@
 
 ## Screenshots
 
-![Login](https://github.com/cdiazmo/pizzajeff/blob/main/screeenshots/Login.png)
-![List](https://github.com/cdiazmo/pizzajeff/blob/main/screeenshots/List.png)
-![Detail](https://github.com/cdiazmo/pizzajeff/blob/main/screeenshots/Detail.png)
-![Offer](https://github.com/cdiazmo/pizzajeff/blob/main/screeenshots/Offer.png)
-![Confirmation](https://github.com/cdiazmo/pizzajeff/blob/main/screeenshots/Confirmation.png)
+![Login](https://github.com/cdiazmo/pizzajeff/blob/main/screenshots/Login.png)
+![List](https://github.com/cdiazmo/pizzajeff/blob/main/screenshots/List.png)
+![Detail](https://github.com/cdiazmo/pizzajeff/blob/main/screenshots/Detail.png)
+![Offer](https://github.com/cdiazmo/pizzajeff/blob/main/screenshots/Offer.png)
+![Confirmation](https://github.com/cdiazmo/pizzajeff/blob/main/screenshots/Confirmation.png)
+
