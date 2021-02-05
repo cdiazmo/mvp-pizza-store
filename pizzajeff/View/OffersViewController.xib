@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OffersViewController" customModule="pizzajeff" customModuleProvider="target">
+            <connections>
+                <outlet property="offerAnimationView" destination="mW1-3S-zlP" id="aue-Y2-df4"/>
+                <outlet property="offerBackgroundView" destination="u7u-Su-Iuq" id="lpW-CM-0fl"/>
+                <outlet property="offerDescription" destination="2a8-4Z-zOe" id="qh5-M5-dan"/>
+                <outlet property="offerImageView" destination="vyr-zU-wF4" id="Xhb-VT-eWE"/>
+                <outlet property="offerTitleLabel" destination="ZVx-ff-sfF" id="J87-JL-4D2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fe3-aW-Hxe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-Su-Iuq">
+                    <rect key="frame" x="20" y="288" width="374" height="320"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyr-zU-wF4">
+                            <rect key="frame" x="10" y="124" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="9h6-yY-qY7"/>
+                                <constraint firstAttribute="height" constant="100" id="dcc-Mp-UCZ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2a8-4Z-zOe">
+                            <rect key="frame" x="115" y="124" width="249" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="mW1-3S-zlP" customClass="AnimationView" customModule="Lottie">
+                            <rect key="frame" x="112" y="0.0" width="150" height="70"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="agM-sE-kPt"/>
+                                <constraint firstAttribute="height" constant="70" id="reh-K1-ALx"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uM3-Zf-JTj" customClass="RoundedButton" customModule="pizzajeff" customModuleProvider="target">
+                            <rect key="frame" x="224" y="260" width="130" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="acceptButton"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="cpy-Z7-iZd"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Lo quiero"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="buttonStyle">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="offerAcceptAction:" destination="-1" eventType="touchUpInside" id="zeI-Xr-MbZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-JI-2Uq" customClass="RoundedButton" customModule="pizzajeff" customModuleProvider="target">
+                            <rect key="frame" x="20" y="260" width="130" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="declineButton"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="i8U-8K-utO"/>
+                                <constraint firstAttribute="width" constant="130" id="rzq-Kk-PPX"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="No, gracias"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="buttonStyle">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="offerDeclineAction:" destination="-1" eventType="touchUpInside" id="do1-RR-7uY"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer tittle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVx-ff-sfF">
+                            <rect key="frame" x="138" y="80" width="98" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="Cvr-NF-NvO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="vyr-zU-wF4" firstAttribute="leading" secondItem="u7u-Su-Iuq" secondAttribute="leading" constant="10" id="3Sn-eC-VZv"/>
+                        <constraint firstAttribute="height" constant="320" id="3UJ-Xz-YTV"/>
+                        <constraint firstItem="Ywx-JI-2Uq" firstAttribute="baseline" secondItem="uM3-Zf-JTj" secondAttribute="baseline" id="4Ed-Mb-xuT"/>
+                        <constraint firstItem="Ywx-JI-2Uq" firstAttribute="top" secondItem="uM3-Zf-JTj" secondAttribute="top" id="4Y9-BZ-FAi"/>
+                        <constraint firstAttribute="bottom" secondItem="Ywx-JI-2Uq" secondAttribute="bottom" constant="20" id="Al6-9l-vcg"/>
+                        <constraint firstAttribute="trailing" secondItem="2a8-4Z-zOe" secondAttribute="trailing" constant="10" id="Jch-dv-I1T"/>
+                        <constraint firstItem="Ywx-JI-2Uq" firstAttribute="firstBaseline" secondItem="uM3-Zf-JTj" secondAttribute="firstBaseline" id="Kak-5q-oSA"/>
+                        <constraint firstItem="Ywx-JI-2Uq" firstAttribute="leading" secondItem="u7u-Su-Iuq" secondAttribute="leading" constant="20" id="Qux-fQ-69r"/>
+                        <constraint firstItem="2a8-4Z-zOe" firstAttribute="top" secondItem="ZVx-ff-sfF" secondAttribute="bottom" constant="20" id="QxA-1C-4RP"/>
+                        <constraint firstItem="vyr-zU-wF4" firstAttribute="top" secondItem="2a8-4Z-zOe" secondAttribute="top" id="RQb-jV-gyi"/>
+                        <constraint firstItem="ZVx-ff-sfF" firstAttribute="centerX" secondItem="u7u-Su-Iuq" secondAttribute="centerX" id="SEb-H6-VZi"/>
+                        <constraint firstAttribute="trailing" secondItem="uM3-Zf-JTj" secondAttribute="trailing" constant="20" id="TJz-St-DFI"/>
+                        <constraint firstItem="ZVx-ff-sfF" firstAttribute="top" secondItem="mW1-3S-zlP" secondAttribute="bottom" constant="10" id="W2p-x7-zTg"/>
+                        <constraint firstItem="mW1-3S-zlP" firstAttribute="top" secondItem="u7u-Su-Iuq" secondAttribute="top" id="WaN-wA-f9e"/>
+                        <constraint firstItem="uM3-Zf-JTj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2a8-4Z-zOe" secondAttribute="bottom" constant="10" id="bud-7h-z8k"/>
+                        <constraint firstItem="mW1-3S-zlP" firstAttribute="centerX" secondItem="u7u-Su-Iuq" secondAttribute="centerX" id="hPB-bT-Gwe"/>
+                        <constraint firstItem="2a8-4Z-zOe" firstAttribute="leading" secondItem="vyr-zU-wF4" secondAttribute="trailing" constant="5" id="iPq-aF-rXj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.036339514034310572" green="0.035680644372805832" blue="0.036174796618934385" alpha="0.27517015106823978" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="u7u-Su-Iuq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8V9-ke-H3o"/>
+                <constraint firstItem="u7u-Su-Iuq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XgR-Rm-L8Q"/>
+                <constraint firstItem="u7u-Su-Iuq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="u9A-E9-UtR"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="105.80357142857143"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Ywx-JI-2Uq">
+            <size key="intrinsicContentSize" width="95" height="34"/>
+        </designable>
+        <designable name="uM3-Zf-JTj">
+            <size key="intrinsicContentSize" width="78" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

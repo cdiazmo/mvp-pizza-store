@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmationViewController" customModule="pizzajeff" customModuleProvider="target">
+            <connections>
+                <outlet property="animationPlaceholder" destination="HYD-6e-cEt" id="8G1-rq-dLJ"/>
+                <outlet property="descriptionLabel" destination="S0S-Vd-NAW" id="Yb0-VB-NA0"/>
+                <outlet property="headerTitle" destination="DTc-P8-ipC" id="7uU-qF-Plg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nvd-Bq-4S0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-q2-GdL" customClass="RoundedButton" customModule="pizzajeff" customModuleProvider="target">
+                    <rect key="frame" x="107" y="782" width="200" height="60"/>
+                    <accessibility key="accessibilityConfiguration" identifier="continueButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="9SU-rp-lZI"/>
+                        <constraint firstAttribute="width" constant="200" id="WWi-Rr-U7b"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Continuar"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="continueAction:" destination="-1" eventType="touchUpInside" id="JF2-lm-E5n"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oido cocina!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-P8-ipC">
+                    <rect key="frame" x="112" y="324" width="190" height="42"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYD-6e-cEt" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="20" y="64" width="374" height="240"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="OQu-An-PoA"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu pedido con referencia #123123 está siendo preparado y en breve se encontrará disponible" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-Vd-NAW">
+                    <rect key="frame" x="20" y="396" width="374" height="90"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Og0-q2-GdL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1eI-74-C7L"/>
+                <constraint firstItem="S0S-Vd-NAW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8V0-Gg-gC8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Og0-q2-GdL" secondAttribute="bottom" constant="20" id="OdV-m5-9de"/>
+                <constraint firstItem="DTc-P8-ipC" firstAttribute="top" secondItem="HYD-6e-cEt" secondAttribute="bottom" constant="20" id="QTq-lT-q68"/>
+                <constraint firstAttribute="trailing" secondItem="S0S-Vd-NAW" secondAttribute="trailing" constant="20" id="U7P-Pm-4ya"/>
+                <constraint firstItem="DTc-P8-ipC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="blA-BG-r41"/>
+                <constraint firstItem="S0S-Vd-NAW" firstAttribute="top" secondItem="DTc-P8-ipC" secondAttribute="bottom" constant="30" id="e3s-3A-dcQ"/>
+                <constraint firstItem="HYD-6e-cEt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="onE-ml-nM4"/>
+                <constraint firstItem="HYD-6e-cEt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="puW-yw-zOO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HYD-6e-cEt" secondAttribute="trailing" constant="20" id="vmm-Dz-Psc"/>
+                <constraint firstItem="S0S-Vd-NAW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="zfO-sS-Wr2"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="112.5"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Og0-q2-GdL">
+            <size key="intrinsicContentSize" width="83" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
